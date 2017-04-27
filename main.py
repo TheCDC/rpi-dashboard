@@ -24,7 +24,7 @@ def main():
     CLOCK = pygame.time.Clock()
 
     DISPLAYSURF = pygame.display.set_mode(
-        size, pygame.FULLSCREEN | pygame.DOUBLEBUF | pygame.HWSURFACE, 32)
+        size)
     frames = 0
     while True:
         for event in pygame.event.get():
