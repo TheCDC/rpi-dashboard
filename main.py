@@ -28,7 +28,7 @@ def main():
                 pygame.mixer.quit()
                 pygame.quit()
                 sys.exit()
-        v = (frames / 16) * 255
+        v = (frames / 60) * 255
         DISPLAYSURF.fill((v, v, v))
         pygame.display.update()
         frames += 1
