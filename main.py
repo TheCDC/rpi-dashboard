@@ -32,7 +32,7 @@ def main():
         DISPLAYSURF.fill((v, v, v))
         pygame.display.update()
         frames += 1
-        CLOCK.tick(16)
+        CLOCK.tick(60)
 
 if __name__ == '__main__':
     main()
