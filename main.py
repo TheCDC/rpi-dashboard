@@ -39,8 +39,9 @@ def main():
                 pygame.mixer.quit()
                 pygame.quit()
                 sys.exit()
-        v = ((frames % 16) / 16) * 255
-        DISPLAYSURF.fill(randcolor())
+        # v = ((frames % 16) / 16) * 255
+        if frames % 2 == 0:
+            DISPLAYSURF.fill(randcolor())
         pygame.display.update()
         frames += 1
         CLOCK.tick(16)
