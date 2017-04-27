@@ -1,11 +1,16 @@
 import pygame
 import sys
+import random
 import os
 # Tell the RPi to use the TFT screen and that it's a touchscreen device
 # os.putenv('SDL_VIDEODRIVER', 'fbcon')
 # os.putenv('SDL_FBDEV', '/dev/fb1')
 # os.putenv('SDL_MOUSEDRV', 'TSLIB')
 # os.putenv('SDL_MOUSEDEV', '/dev/input/touchscreen')
+
+
+def randcolor():
+    return tuple([random.randrange(0, 255) for i in range(3)])
 
 
 def main():
@@ -35,7 +40,7 @@ def main():
                 pygame.quit()
                 sys.exit()
         v = ((frames % 16) / 16) * 255
-        DISPLAYSURF.fill((v, v, v))
+        DISPLAYSURF.fill(randcolor())
         pygame.display.update()
         frames += 1
         CLOCK.tick(16)
