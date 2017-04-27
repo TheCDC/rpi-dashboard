@@ -28,11 +28,11 @@ def main():
                 pygame.mixer.quit()
                 pygame.quit()
                 sys.exit()
-        v = (frames / 16) * 255
+        v = ((frames % 16) / 16) * 255
         DISPLAYSURF.fill((v, v, v))
         pygame.display.update()
         frames += 1
-        CLOCK.tick(60)
+        CLOCK.tick(16)
 
 if __name__ == '__main__':
     main()
