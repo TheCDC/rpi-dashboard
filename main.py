@@ -5,8 +5,10 @@ import sys
 def main():
     pygame.init()
     infoObj = pygame.display.Info()
-    WIDTH = int(infoObj.current_w)
-    HEIGHT = int(infoObj.current_h)
+    # WIDTH = int(infoObj.current_w)
+    # HEIGHT = int(infoObj.current_h)
+    WIDTH = 800
+    HEIGHT = 480
     size = (WIDTH, HEIGHT)
     CLOCK = pygame.time.Clock()
 
